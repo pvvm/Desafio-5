@@ -1,0 +1,54 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder="http://"
+        value="{{ student.avatar_url }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome Completo</div>
+    <div>
+        <input type="text" name="name" placeholder="Digite aqui seu nome"
+        value="{{ student.name }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de Nascimento</div>
+    <div>
+        <input type="date" name="birth"
+        value="{{ student.birth }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>E-mail</div>
+    <div>
+        <input type="email" name="email" placeholder="exemplo@email.com"
+        value="{{ student.email }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Ano Escolar</div>
+    <select name="academic_year">
+        <option value="5f" {% if student.academic_year == "5f" %} selected {% endif %}>5º Ano do Ensino Fundamental</option>
+        <option value="6f" {% if student.academic_year == "6f" %} selected {% endif %}>6º Ano do Ensino Fundamental</option>
+        <option value="7f" {% if student.academic_year == "7f" %} selected {% endif %}>7º Ano do Ensino Fundamental</option>
+        <option value="8f" {% if student.academic_year == "8f" %} selected {% endif %}>8º Ano do Ensino Fundamental</option>
+        <option value="9f" {% if student.academic_year == "9f" %} selected {% endif %}>9º Ano do Ensino Fundamental</option>
+        <option value="1m" {% if student.academic_year == "1m" %} selected {% endif %}>1º Ano do Ensino Médio</option>
+        <option value="2m" {% if student.academic_year == "2m" %} selected {% endif %}>2º Ano do Ensino Médio</option>
+        <option value="3m" {% if student.academic_year == "3m" %} selected {% endif %}>3º Ano do Ensino Médio</option>
+    </select>
+</div>
+
+<div class="item">
+    <div>Carga Horária Semanal (horas)</div>
+    <div>
+        <input type="number" name="workload" value="{{ student.workload }}">
+    </div>
+</div>
+
+<button type="submit">Salvar</button>
